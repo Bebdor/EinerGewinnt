@@ -90,7 +90,7 @@ public partial class Form1 : Form
         {
             for (int j = 0; j < 6; j++)
             {
-                _spielFeld[i, j].BackColor = Color.White;
+                _spielFeld[i, j].BackColor = SystemColors.Control;
             }
         }
         
