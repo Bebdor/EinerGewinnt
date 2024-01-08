@@ -14,7 +14,6 @@ public partial class Form1 : Form
 
     public Form1()
     {
-        //Hallo
         InitializeComponent();
         Spielfelderzeugen();
     }
@@ -37,42 +36,50 @@ public partial class Form1 : Form
                 break;
             }
 
-        for (var i = 0; i < 7; i++)
+        try
+        {
+            for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
-                if(j > 3)
+                if (j > 3)
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
-                 _spielFeld[i, j].BackColor == Color.Yellow) && (
-                    (_spielFeld[i, j].BackColor == _spielFeld[i, j + 1].BackColor &&
-                      _spielFeld[i, j].BackColor == _spielFeld[i, j + 2].BackColor &&
-                      _spielFeld[i, j].BackColor == _spielFeld[i, j + 3].BackColor )))
-                Altf4();
-        for (var i = 0; i < 7; i++)
+                         _spielFeld[i, j].BackColor == Color.Yellow) &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i, j + 1].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i, j + 2].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i, j + 3].BackColor)
+                        Altf4();
+            for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
                 if (i < 4)
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
-                 _spielFeld[i, j].BackColor == Color.Yellow) && (
-                    (_spielFeld[i, j].BackColor == _spielFeld[i + 1, j].BackColor &&
-                      _spielFeld[i, j].BackColor == _spielFeld[i + 2, j].BackColor &&
-                      _spielFeld[i, j].BackColor == _spielFeld[i + 3, j].BackColor)))
-                Altf4();
-        for (var i = 0; i < 7; i++)
+                         _spielFeld[i, j].BackColor == Color.Yellow) &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 1, j].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 2, j].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 3, j].BackColor)
+                        Altf4();
+            for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
-                if ((i < 4 && j > 3))
+                if (i < 4 && j > 3)
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
-                 _spielFeld[i, j].BackColor == Color.Yellow)&& 
-                    (_spielFeld[i, j].BackColor == _spielFeld[i + 1, j + 1].BackColor &&
-                     _spielFeld[i, j].BackColor == _spielFeld[i + 2, j + 2].BackColor &&
-                     _spielFeld[i, j].BackColor == _spielFeld[i + 3, j + 3].BackColor))
-                Altf4();
-        for (var i = 0; i < 7; i++)
+                         _spielFeld[i, j].BackColor == Color.Yellow) &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 1, j + 1].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 2, j + 2].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 3, j + 3].BackColor)
+                        Altf4();
+            for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
-                if (i < 4 )
+                if (i < 4)
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
-                 _spielFeld[i, j].BackColor == Color.Yellow) && (
-                    (_spielFeld[i, j].BackColor == _spielFeld[i + 1, j - 1].BackColor &&
-                     _spielFeld[i, j].BackColor == _spielFeld[i + 2, j - 2].BackColor &&
-                     _spielFeld[i, j].BackColor == _spielFeld[i + 3, j - 3].BackColor)))
-                Altf4();
+                         _spielFeld[i, j].BackColor == Color.Yellow) &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 1, j - 1].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 2, j - 2].BackColor &&
+                        _spielFeld[i, j].BackColor == _spielFeld[i + 3, j - 3].BackColor)
+                        Altf4();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+            throw;
+        }
     }
 
     private void Spielfelderzeugen()
