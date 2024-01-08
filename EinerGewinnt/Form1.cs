@@ -18,11 +18,12 @@ public partial class Form1 : Form
         Spielfelderzeugen();
     }
 
-    private void Altf4()
-    {
-        MessageBox.Show((_x % 2 != 0 ? "Rot" : "Gelb") + @" hat gewonnen!");
-    }
-
+    /**
+     * @TODO: Beim gewinnen alles resetten
+     * @TODO: Animation hinzufügen
+     */
+    
+    
     private void NextMove(object sender, EventArgs e)
     {
         var clickedButton = (Button)sender;
@@ -40,7 +41,7 @@ public partial class Form1 : Form
         {
             for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
-                if (j > 3)
+                if (j < 3)
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
                          _spielFeld[i, j].BackColor == Color.Yellow) &&
                         _spielFeld[i, j].BackColor == _spielFeld[i, j + 1].BackColor &&
@@ -58,7 +59,7 @@ public partial class Form1 : Form
                         Altf4();
             for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
-                if (i < 4 && j > 3)
+                if (i < 4 && j < 3)
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
                          _spielFeld[i, j].BackColor == Color.Yellow) &&
                         _spielFeld[i, j].BackColor == _spielFeld[i + 1, j + 1].BackColor &&
@@ -80,6 +81,11 @@ public partial class Form1 : Form
             Console.WriteLine(exception);
             throw;
         }
+    }
+
+    private void Altf4()
+    {
+        MessageBox.Show((_x % 2 != 0 ? "Rot" : "Gelb") + @" hat gewonnen!");
     }
 
     private void Spielfelderzeugen()
