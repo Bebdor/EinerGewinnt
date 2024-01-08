@@ -9,3 +9,13 @@ C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.c
 C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.exe
 C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.pdb
 C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.Form1.resources
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\bin\Debug\EinerGewinnt.exe.config
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\bin\Debug\EinerGewinnt.exe
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\bin\Debug\EinerGewinnt.pdb
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.AssemblyReference.cache
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.Form1.resources
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.Properties.Resources.resources
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.GenerateResource.cache
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.CoreCompileInputs.cache
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.exe
+C:\Users\justi\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.pdb

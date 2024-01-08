@@ -86,6 +86,14 @@ public partial class Form1 : Form
     private void Altf4()
     {
         MessageBox.Show((_x % 2 != 0 ? "Rot" : "Gelb") + @" hat gewonnen!");
+        for (int i = 0; i < 7; i++)
+        {
+            for (int j = 0; j < 6; j++)
+            {
+                _spielFeld[i, j].BackColor = Color.White;
+            }
+        }
+        
     }
 
     private void Spielfelderzeugen()
