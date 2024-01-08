@@ -1,0 +1,11 @@
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\bin\Debug\EinerGewinnt.exe.config
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\bin\Debug\EinerGewinnt.exe
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\bin\Debug\EinerGewinnt.pdb
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.AssemblyReference.cache
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.Properties.Resources.resources
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.GenerateResource.cache
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.csproj.CoreCompileInputs.cache
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.exe
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.pdb
+C:\Users\Bebdor\RiderProjects\EinerGewinnt\EinerGewinnt\obj\Debug\EinerGewinnt.Form1.resources
