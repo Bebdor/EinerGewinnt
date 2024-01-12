@@ -10,6 +10,7 @@ namespace EinerGewinnt;
 public partial class Form1 : Form
 {
     private readonly Button[,] _spielFeld = new Button[7, 6];
+    private readonly Label _label = new Label();
     private int _x;
 
     public Form1()
@@ -20,7 +21,10 @@ public partial class Form1 : Form
 
     /**
      * @TODO: Animation hinzufügen
+     * @TODO: Feuerwerk hinzufügen
+     * @TODO: Spielstand speichern (Punktestand)
      */
+    
     private void NextMove(object sender, EventArgs e)
     {
         var clickedButton = (Button)sender;
@@ -32,6 +36,7 @@ public partial class Form1 : Form
             {
                 _spielFeld[columnIndex, y].BackColor = _x % 2 == 0 ? Color.Red : Color.Yellow;
                 _x++;
+                
                 break;
             }
 
@@ -95,6 +100,10 @@ public partial class Form1 : Form
 
     private void Spielfelderzeugen()
     {
+        _label.AutoSize = true;
+        _label.Text = @"Spieler 1 ist Rot, Spieler 2 ist Gelb";
+        _label.Location = new Point(3*80+200, 8*80+50);
+        Controls.Add(_label);
         for (var x = 0; x < 7; x++)
         for (var y = 0; y < 6; y++)
         {
