@@ -10,6 +10,7 @@ namespace EinerGewinnt;
 public partial class Form1 : Form
 {
     private readonly Button[,] _spielFeld = new Button[7, 6];
+    private readonly Label _animation = new Label();
     private readonly Label _label = new Label();
     private int _x;
 
@@ -36,9 +37,17 @@ public partial class Form1 : Form
             {
                 _spielFeld[columnIndex, y].BackColor = _x % 2 == 0 ? Color.Red : Color.Yellow;
                 _x++;
-                
                 break;
             }
+        
+        _animation.Location = clickedButton.Location;
+        _animation.BackColor = Color.Aqua;
+        //_animation.BackColor = _x % 2 == 0 ? Color.Red : Color.Yellow;
+
+
+        var animationLocation = _animation.Location;
+        animationLocation.Y = 180;
+        
 
         try
         {
@@ -100,6 +109,12 @@ public partial class Form1 : Form
 
     private void Spielfelderzeugen()
     {
+        _animation.AutoSize = false;
+        _animation.Size = new Size(76, 76);
+        _animation.BackColor = SystemColors.Control;
+        _animation.Location = new Point(100, 100);
+        Controls.Add(_animation);
+        
         _label.AutoSize = true;
         _label.Text = @"Spieler 1 ist Rot, Spieler 2 ist Gelb";
         _label.Location = new Point(3*80+200, 8*80+50);
