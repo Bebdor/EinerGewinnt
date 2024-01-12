@@ -19,18 +19,16 @@ public partial class Form1 : Form
     }
 
     /**
-     * @TODO: Beim gewinnen alles resetten
      * @TODO: Animation hinzufügen
      */
-    
-    
     private void NextMove(object sender, EventArgs e)
     {
         var clickedButton = (Button)sender;
         var columnIndex = int.Parse(clickedButton.Name.Substring(6, 1));
 
         for (var y = 5; y >= 0; y--)
-            if (_spielFeld[columnIndex, y].BackColor == SystemColors.Control)
+            if (_spielFeld[columnIndex, y].BackColor == SystemColors.Control ||
+                _spielFeld[columnIndex, y].BackColor == Color.White)
             {
                 _spielFeld[columnIndex, y].BackColor = _x % 2 == 0 ? Color.Red : Color.Yellow;
                 _x++;
@@ -68,15 +66,18 @@ public partial class Form1 : Form
                         Altf4();
             for (var i = 0; i < 7; i++)
             for (var j = 0; j < 6; j++)
-                if (i < 4)
+                if (i < 4 && j >= 3)
+                {
                     if ((_spielFeld[i, j].BackColor == Color.Red ||
                          _spielFeld[i, j].BackColor == Color.Yellow) &&
                         _spielFeld[i, j].BackColor == _spielFeld[i + 1, j - 1].BackColor &&
                         _spielFeld[i, j].BackColor == _spielFeld[i + 2, j - 2].BackColor &&
                         _spielFeld[i, j].BackColor == _spielFeld[i + 3, j - 3].BackColor)
                         Altf4();
+                }
+
         }
-        catch (Exception exception)
+        catch (IndexOutOfRangeException exception)
         {
             Console.WriteLine(exception);
             throw;
@@ -86,13 +87,9 @@ public partial class Form1 : Form
     private void Altf4()
     {
         MessageBox.Show((_x % 2 != 0 ? "Rot" : "Gelb") + @" hat gewonnen!");
-        for (int i = 0; i < 7; i++)
-        {
-            for (int j = 0; j < 6; j++)
-            {
-                _spielFeld[i, j].BackColor = Color.White;
-            }
-        }
+        for (var i = 0; i < 7; i++)
+        for (var j = 0; j < 6; j++)
+            _spielFeld[i, j].BackColor = Color.White;
         
     }
 
